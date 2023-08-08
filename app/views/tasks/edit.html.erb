@@ -1,0 +1,9 @@
+<h1>Edit task</h1>
+<%= form_with model: @task do |t| %>
+  <!-- <input type="text" name="name"> -->
+  <%= t.label :title %>
+  <%= t.text_field :title, class: 'form-control' %>
+  <%= t.label :details %>
+  <%= t.text_field :details, class: 'form-control' %>
+  <%= t.submit "Update Task", class: 'btn btn-primary mt-2' %>
+<% end %>

@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <h1><%= @task.title %></h1>
+  <div class="cards p-3 bg-light">
+  <p><%= @task.details %></p>
+  </div>
+       <h4>
+
+        <% if @task.completed? %>
+        <h6> <i class="fa-regular fa-square-check"></i> This task is completed. </h6>
+        <% else %>
+        <h6> <i class="fa-regular fa-square"></i> This task is not complete yet! </h6>
+        <% end %>
+        <%= link_to "Back to List", tasks_path %>
+        <%= link_to "Edit this task", edit_path %>
+
+  <%# <p><%= @task.completed %>
+  <%# <p><%= link_to 'Home', restaurants_path, class: 'btn btn-light'  %>
+  <%# <p><%= link_to '🗑️', restaurant_path(@restaurant), class: 'btn btn-light', data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }  %>
+</div>
